@@ -132,15 +132,12 @@ export default {
   },
   created() {
     this.setImageMacaron()
-    this.setImgageInit(
-      'https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.0-9/119449882_10220621746588414_2666681935724071800_o.jpg?_nc_cat=100&_nc_sid=09cbfe&_nc_eui2=AeEkHcJ869JD7r2cK0aikyikTKsLE_tZkrtMqwsT-1mSu_HJMrQUSL1UrxJB2fEBBsTP-V4iSiSDahPfue-5rg1W&_nc_ohc=BHXDa7T6a0AAX8s6Q6Y&_nc_ht=scontent.fbkk5-5.fna&oh=a9be0907b6babe254b11c08316263b0e&oe=5F8AF84B'
-    )
+    this.setImgageInit('')
   },
   methods: {
     handleUploadImage(event) {
       const file = event.target.files[0]
 
-      console.log(file)
       this.setImgage(window.URL.createObjectURL(file))
     },
     clearImage() {
@@ -199,7 +196,6 @@ export default {
     },
     handleStageMouseDown(e) {
       // clicked on stage - clear selection
-      console.log(e.target)
       if (e.target === e.target.getStage()) {
         this.selectedShapeName = ''
         this.updateTransformer()
