@@ -1,4 +1,4 @@
-# mhins-macaron-fe
+# Nuxt-edit-image
 
 ## Build Setup
 
