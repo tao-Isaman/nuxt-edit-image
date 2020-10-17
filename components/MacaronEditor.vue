@@ -164,7 +164,7 @@ export default {
     setImageMacaron() {
       // eslint-disable-next-line nuxt/no-globals-in-created
       const image = new window.Image()
-      image.src = require('../assets/img/macaron.png')
+      image.src = require('../assets/img/landmark2020.png')
       image.width = 300
       image.height = 300
       image.onload = () => {
