@@ -1,4 +1,5 @@
 # Nuxt-edit-image
+this project is a opensourse for edit image . i hope to any guy pr for any idea.
 
 ## Build Setup
 
@@ -16,5 +17,5 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+# for Hacktoberfest
+## so i open for any idea in this project 
