@@ -2,7 +2,7 @@
   <v-app>
     <app-bar></app-bar>
     <v-row class="margin-layout">
-      <v-col> <MacaronEditor /></v-col
+      <v-col> <DemocracyEditor /></v-col
     ></v-row>
   </v-app>
 </template>
