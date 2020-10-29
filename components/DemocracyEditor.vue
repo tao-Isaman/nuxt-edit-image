@@ -10,7 +10,7 @@
           rounded
           block
           @click="$refs.pickcolor.click()"
-          >เลือกสีมาการอง</v-btn
+          >เลือกสีหมุดคณะราษฎร</v-btn
         >
         <input
           ref="pickcolor"
@@ -24,7 +24,7 @@
           v-model="textConfig.text"
         ></v-text-field>
         <v-btn v-on:click="clearText()">Clear Text</v-btn> -->
-        <v-btn
+        <!-- <v-btn
           class="margin-button"
           width="200"
           color="primary"
@@ -33,15 +33,15 @@
           block
           @click="$refs.uploadimg.click()"
           >อัพโหลดรูปภาพ</v-btn
-        >
-        <input
+        > -->
+        <!-- <input
           ref="uploadimg"
           type="file"
           accept="image/*"
           hidden
           @change="handleUploadImage"
-        />
-        <v-btn
+        /> -->
+        <!-- <v-btn
           class="margin-button"
           width="200"
           color="red"
@@ -50,7 +50,7 @@
           block
           @click="clearImage()"
           >ลบรูปภาพ</v-btn
-        >
+        > -->
       </v-col>
       <v-col justfy="center" align="center">
         <v-stage
@@ -62,7 +62,7 @@
           <v-layer ref="layer">
             <v-image
               :config="{
-                image: imageMacaron,
+                image: imageDemocracy,
                 fill: color,
               }"
             />
@@ -84,7 +84,7 @@
 
     <v-footer class="pa-4" color="transparent" fixed>
       <v-btn color="primary" depressed rounded block dark @click="saveImg()"
-        >ถัดไป</v-btn
+        >บันทึกรูป</v-btn
       >
     </v-footer>
   </v-container>
@@ -126,12 +126,12 @@ export default {
         strokeWidth: 4,
       },
       selectedShapeName: '',
-      imageMacaron: null,
+      imageDemocracy: null,
       image: null,
     }
   },
   created() {
-    this.setImageMacaron()
+    this.setImageDemocracy()
     this.setImgageInit('')
   },
   methods: {
@@ -150,7 +150,7 @@ export default {
       const canvas = this.$refs.stage._konvaNode
       // console.log('saveImg', canvas)
       const dataURL = canvas.toDataURL({ pixelRatio: 3 })
-      this.downloadURI(dataURL, 'stage.png')
+      this.downloadURI(dataURL, 'democracy.png')
     },
 
     downloadURI(uri, name) {
@@ -161,7 +161,7 @@ export default {
       link.click()
       document.body.removeChild(link)
     },
-    setImageMacaron() {
+    setImageDemocracy() {
       // eslint-disable-next-line nuxt/no-globals-in-created
       const image = new window.Image()
       image.src = require('../assets/img/landmark2020.png')
@@ -169,7 +169,7 @@ export default {
       image.height = 300
       image.onload = () => {
         // set image only when it is loaded
-        this.imageMacaron = image
+        this.imageDemocracy = image
       }
     },
     setImgageInit(imageUrl) {
