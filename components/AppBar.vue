@@ -1,7 +1,7 @@
 <template>
   <v-app-bar color="primary" dense app>
     <v-spacer></v-spacer>
-    <v-toolbar-title>Nuxt-Edit-img</v-toolbar-title>
+    <v-toolbar-title color="primary">คณะราษฎร</v-toolbar-title>
 
     <v-spacer></v-spacer>
   </v-app-bar>
